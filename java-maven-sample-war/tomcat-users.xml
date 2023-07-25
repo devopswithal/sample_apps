@@ -1,0 +1,18 @@
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+    <!--
+      By default, no user is included in the "manager-gui" role required
+      to operate the "/manager/html" web application.  If you wish to use this app,
+      you must define such a user - the username and password are arbitrary.
+
+      Built-in Tomcat manager roles:
+        - manager-gui    - allows access to the HTML GUI and the status pages
+        - manager-script - allows access to the HTTP API and the status pages
+        - manager-jmx    - allows access to the JMX proxy and the status pages
+        - manager-status - allows access to the status pages only
+    -->
+    <user username="admin" password="password1" roles="manager-gui, manager-script"/>
+    <user username="deployer" password="password2" roles="manager-script"/>
+</tomcat-users>
